@@ -1,110 +1,53 @@
-name: Bug Report
-description: File a bug report
-labels: ["Bug"]
+name: Zgłaszanie błędu | radziuDev
+description: Zgłoś nam twój błąd dotyczący pluginu radziuXRay
+labels: ["BŁĄD"]
 body:
   - type: checkboxes
     id: searched
     attributes:
-      label: Terms
+      label: Zasady
       options:
-        - label: "I'm using the very latest version of ItemsAdder and its dependencies."
-          required: true
-        - label: I already searched on this [Github page](https://github.com/PluginBugs/Issues-ItemsAdder/issues) to check if the same issue was already reported.
-          required: true
-        - label: I already searched on the [plugin wiki](https://itemsadder.devs.beer/) to know if a solution is already known.
-          required: true
-        - label: I already asked on the **#💬ia-community-help** channel on **Discord** to know if anyone already has a solution for the issue.
+        - label: "Używam najnowszej wersji pluginu radziuXRay"
           required: true
   - type: input
     id: discord_tag
     attributes:
-      label: Discord tag (optional)
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. DiscordTag#0001
+      label: Twój discord tag (opcjonalne)
+      description: Jak możemy się z Tobą skontaktować w celu uzyskania więcej informacji?
+      placeholder: np. DiscordTag#0001
     validations:
       required: false
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: A clear and concise description of what the bug is.
-      placeholder: Tell us what you see!
-      placeholder: "Example: I can't interact with custom furniture if I'm in my own claim"
+      label: Co się stało?
+      description: Krótki opis co się stało podczas używania naszego pluginu.
+      placeholder: Powiedz nam co widzisz!
+      placeholder: "np. Po włączeniu opcji ... plugin wyrzuca błąd w konsoli"
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce the issue
-      description: Describe how to reproduce the issue step by step
+      label: Co trzeba zrobić aby wygenerować ten sam błąd
+      description: Opisz nam, jak możemy uzyskać ten sam błąd?
       placeholder: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
+        1. Wejdź w '...'
+        2. Kliknij w '....'
+        3. Zjedź w dół na '....'
+        4. Zobacz błąd
     validations:
       required: true
   - type: textarea
     id: server_version
     attributes:
-      label: Server version
-      description: "(run `/version` command and paste it here)"
+      label: Wersja serwer
+      description: "(użyj komendy `/version` i wpisz tutaj)"
       placeholder: |
-        Run `/version` command and paste it here
+        Użyj komendy `/version` i wklej wynik tutaj.
         
-        Example:
+        Przykład:
         This server is running Paper version git-Paper-788 (MC: 1.16.5) (Implementing API version 1.16.5-R0.1-SNAPSHOT)"
-  - type: textarea
-    id: plugin_version
-    attributes:
-      label: ItemsAdder Version
-      placeholder: |
-        DO NOT WRITE 'LATEST', run command `/version ItemsAdder` and paste it here.
-        
-        Example:
-        ItemsAdder version 2.4.17
-    validations:
-      required: true
-  - type: textarea
-    id: protocollib_version
-    attributes:
-      label: ProtocolLib Version
-      placeholder: |
-        DO NOT WRITE 'LATEST', run command `/version ProtocolLib` and paste it here.
-        
-        Example:
-        ProtocolLib version 2.4.17
-    validations:
-      required: true
-  - type: textarea
-    id: lonelibs_version
-    attributes:
-      label: LoneLibs Version
-      placeholder: |
-        DO NOT WRITE 'LATEST', run command `/version LoneLibs` and paste it here.
-        
-        Example:
-        LoneLibs version 2.4.17
-    validations:
-      required: true
-  - type: textarea
-    id: lightapi_version
-    attributes:
-      label: LightAPI Version (optional)
-      placeholder: |
-        DO NOT WRITE 'LATEST', run command `/version LightAPI` and paste it here.
-        
-        Example:
-        LightAPI version 2.4.17
-  - type: textarea
-    id: libsdisguises_version
-    attributes:
-      label: LibsDisguises Version (optional)
-      placeholder: |
-        DO NOT WRITE 'LATEST', run command `/version LibsDisguises` and paste it here.
-        
-        Example:
-        LibsDisguises version 2.4.17
   - type: textarea
     id: full_server_log
     attributes:
@@ -113,8 +56,8 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Error (optional)
-      description: Please copy and paste any error you got (this will be automatically formatted into code).
+      label: Błąd (opcjonalne)
+      description: Wklej tutaj błąd.
       render: shell
       placeholder: |
         [19:26:04] [Craft Scheduler Thread - 18 - ItemsAdder/WARN]: [ItemsAdder] Plugin ItemsAdder v2.4.16 generated an exception while executing task 22801
@@ -137,74 +80,11 @@ body:
             at dev.lone.itemsadder.l.k.<clinit>(SourceFile:12) ~[ItemsAdder.jar:?]
             ... 9 more
   - type: textarea
-    id: configuration_plugin
-    attributes:
-      label: ItemsAdder config.yml
-      description: Please copy and paste the config.yml file of ItemsAdder (this will be automatically formatted into code).
-      render: shell
-      placeholder: | 
-        metrics: true
-        update-checker: true
-        disable-plugin-loading-messages_DONT_ASK_ME_FOR_SUPPORT_IF_YOU_SET_TRUE__THANKS: false
-        resource-pack:
-          hosting:
-            no-host:
-              enabled: false
-            auto-external-host:
-              enabled: false
-  - type: textarea
-    id: configuration_item
-    attributes:
-      label: Problematic items yml configuration file (optional)
-      description: Please copy and paste the file of your item (this will be automatically formatted into code).
-      render: shell
-      placeholder: | 
-        info:
-          namespace: itemsadder
-        items:
-          ruby_block:
-            display_name: display-name-ruby_block
-            permission: ruby_block
-            resource:
-              material: PAPER
-              generate: true
-              textures:
-              - block/ruby_block.png
-            specific_properties:
-              block:
-                placed_model:
-                  type: REAL_NOTE
-                  break_particles_material: REDSTONE_BLOCK
-                break_tools_whitelist:
-                - PICKAXE
-                - pickaxe
-          crystal_block:
-            display_name: display-name-crystal_block
-            permission: crystal_block
-            resource:
-              material: PAPER
-              generate: true
-              textures:
-              - block/crystal_block.png
-            specific_properties:
-              block:
-                placed_model:
-                  type: REAL_NOTE
-                  break_particles_material: PRISMARINE_BRICKS
-                break_tools_whitelist:
-                - PICKAXE
-                - pickaxe
-  - type: textarea
-    id: configuration_files
-    attributes:
-      label: Other files, you can drag and drop them here to upload. (optional)
-      description: Drag and drop your files here.
-  - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots/Videos (you can drag and drop files or paste links)
-      description: If applicable, add screenshots to help explain your problem (you can drag and drop files or paste links).
+      label: Screenshoty / Filmy
+      description: Wklej screenshot aby pomóc nam w rozwiązaniu Twojego problemu.
   - type: markdown
     attributes:
       value: |
-        ## Thanks for taking the time to fill out this bug report!
+        ## Dziękujemy za wypełnienie formularza błędu.
