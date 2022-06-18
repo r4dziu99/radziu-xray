@@ -42,36 +42,22 @@ body:
     id: server_version
     attributes:
       label: Wersja serwera
-      description: "Wybierz swoją wersje serwera (jeśli posiadasz inną - nie dziw się że plugin nie działa.)"
+      description: "Wybierz swoją wersje serwera na którym grasz"
       options:
         - 1.17.2
         - 1.18
         - 1.18.1
         - 1.18.2
         - 1.19
-  - type: textarea
-    id: full_server_log
+  - type: dropdown
+    id: server_name
     attributes:
-      label: PEŁNE logi serwera
-      placeholder: "Prześlij nam logi serwera - to może nam pomóc w naprawie błędu."      
-  - type: textarea
-    id: logs
-    attributes:
-      label: Błąd (opcjonalne)
-      description: Wklej tutaj błąd.
-      render: shell
-      placeholder: |
-        [19:01:04] [Server thread/ERROR]: Could not load 'plugins\radziuXRay.jar' in folder 'plugins'
-          org.bukkit.plugin.InvalidPluginException: Unsupported API version 1.100
-            at org.bukkit.craftbukkit.v1_18_R2.util.CraftMagicNumbers.checkSupported(CraftMagicNumbers.java:375) ~[purpur-1.18.2.jar:git-Purpur-1614]
-            at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:149) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
-            at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:415) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
-            at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:323) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
-            at org.bukkit.craftbukkit.v1_18_R2.CraftServer.loadPlugins(CraftServer.java:418) ~[purpur-1.18.2.jar:git-Purpur-1614]
-            at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:323) ~[purpur-1.18.2.jar:git-Purpur-1614]
-            at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1179) ~[purpur-1.18.2.jar:git-Purpur-1614]
-            at net.minecraft.server.MinecraftServer.lambda$spin$1(MinecraftServer.java:320) ~[purpur-1.18.2.jar:git-Purpur-1614]
-            at java.lang.Thread.run(Thread.java:833) ~[?:?]
+      label: Serwer
+      description: "Wybierz na którym z tych serwerów wystepuje błąd."
+      options:
+        - wither-craft.pl
+        - privatebeta.wither-craft.pl
+        - inny wspierany serwer
   - type: textarea
     id: screenshots
     attributes:
