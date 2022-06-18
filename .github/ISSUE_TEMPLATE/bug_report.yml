@@ -38,16 +38,17 @@ body:
         4. Zobacz błąd
     validations:
       required: true
-  - type: textarea
+  - type: dropdown
     id: server_version
     attributes:
-      label: Wersja serwer
-      description: "(użyj komendy `/version` i wpisz tutaj)"
-      placeholder: |
-        Użyj komendy `/version` i wklej wynik tutaj.
-        
-        Przykład:
-        This server is running Paper version git-Paper-788 (MC: 1.16.5) (Implementing API version 1.16.5-R0.1-SNAPSHOT)"
+      label: Wersja serwera
+      description: "Wybierz swoją wersje serwera (jeśli posiadasz inną - nie dziw się że plugin nie działa.)"
+      options:
+        - 1.17.2
+        - 1.18
+        - 1.18.1
+        - 1.18.2
+        - 1.19
   - type: textarea
     id: full_server_log
     attributes:
