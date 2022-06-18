@@ -60,17 +60,17 @@ body:
       description: Wklej tutaj błąd.
       render: shell
       placeholder: |
-      [19:01:04] [Server thread/ERROR]: Could not load 'plugins\radziuLifeSteal2.jar' in folder 'plugins'
-	org.bukkit.plugin.InvalidPluginException: Unsupported API version 1.19
-	at org.bukkit.craftbukkit.v1_18_R2.util.CraftMagicNumbers.checkSupported(CraftMagicNumbers.java:375) ~[purpur-1.18.2.jar:git-Purpur-1614]
-	at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:149) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
-	at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:415) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
-	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:323) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
-	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.loadPlugins(CraftServer.java:418) ~[purpur-1.18.2.jar:git-Purpur-1614]
-	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:323) ~[purpur-1.18.2.jar:git-Purpur-1614]
-	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1179) ~[purpur-1.18.2.jar:git-Purpur-1614]
-	at net.minecraft.server.MinecraftServer.lambda$spin$1(MinecraftServer.java:320) ~[purpur-1.18.2.jar:git-Purpur-1614]
-	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+        [19:01:04] [Server thread/ERROR]: Could not load 'plugins\radziuLifeSteal2.jar' in folder 'plugins'
+          org.bukkit.plugin.InvalidPluginException: Unsupported API version 1.19
+            at org.bukkit.craftbukkit.v1_18_R2.util.CraftMagicNumbers.checkSupported(CraftMagicNumbers.java:375) ~[purpur-1.18.2.jar:git-Purpur-1614]
+            at org.bukkit.plugin.java.JavaPluginLoader.loadPlugin(JavaPluginLoader.java:149) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
+            at org.bukkit.plugin.SimplePluginManager.loadPlugin(SimplePluginManager.java:415) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
+            at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:323) ~[purpur-api-1.18.2-R0.1-SNAPSHOT.jar:?]
+            at org.bukkit.craftbukkit.v1_18_R2.CraftServer.loadPlugins(CraftServer.java:418) ~[purpur-1.18.2.jar:git-Purpur-1614]
+            at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:323) ~[purpur-1.18.2.jar:git-Purpur-1614]
+            at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1179) ~[purpur-1.18.2.jar:git-Purpur-1614]
+            at net.minecraft.server.MinecraftServer.lambda$spin$1(MinecraftServer.java:320) ~[purpur-1.18.2.jar:git-Purpur-1614]
+            at java.lang.Thread.run(Thread.java:833) ~[?:?]
   - type: textarea
     id: screenshots
     attributes:
