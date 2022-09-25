@@ -1,5 +1,5 @@
-name: Zgłaszanie błędu | radziuDev
-description: Zgłoś nam twój błąd dotyczący pluginu radziuXRay
+name: Zgłoś błąd!
+description: Znalazłeś błąd? Prześlij go tu abyśmy mogli go jak najszybciej rozwiązać!
 labels: ["BŁĄD"]
 body:
   - type: checkboxes
